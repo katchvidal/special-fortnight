@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="text-orange-500"> Listado Component Works </h2>
+
+    <div *ngIf="( heroes.length ); else noHeroes " >
+        <h3> Listado de Heroes </h3>
+        <ul>
+            <li *ngFor="let heroe of heroes"> {{ heroe }} </li>
+        </ul>     
+    </div>
+    <ng-template #noHeroes> <h2> No hay Heroes para Mostrar </h2> </ng-template>
+
+    <div *ngIf="( delete.length ) ">
+        <h3> Heroes Borrados </h3>
+        <ul>
+            <li *ngFor="let del of delete "> {{ del }} </li>
+        </ul>
+
+    </div>
+
+    <button *ngIf="( heroes.length )"  (click)="oneDelete()" > Eliminar One of Array </button>
+    <!-- Arreglo.lenght !== 0 significa que solo se muestre si es difernete de  0 -->
+    <!-- Arreglo.lenght -> Si existe dara True en caso de que no exista dara false -->
+</body>
+</html>

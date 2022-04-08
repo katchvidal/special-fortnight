@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> Heroe component HTML </h2>
+    <h3> Nombre:  {{ nombre }} </h3>
+    <h3> Nombre Capitalizado :  {{ nombre }}  </h3> <!-- Pipe | titlecase-->
+    <h3> Edad: {{ edad }} </h3>
+    <h4> Funcion Obtener Nombre : {{ obtenerNombre() }}  </h4>
+    <h3> {{ nombreUpperCase }} </h3> <!-- Metodo get -->
+    <button (click)=" changeHero()"> Cambiar Hero </button>
+    <button (click)=" changeAge()"> Cambiar Age </button>
+    <button (click)=" resetChange()"> Reset  </button>
+</body>
+</html>
