@@ -1,0 +1,27 @@
+
+<!--
+    Main Page HTML no requiere tener ninguna logica debido a que solo
+    sirve como contenedor de los pequeños paquetes para
+    modularizar la apliaccion los modulos pueden acceder a informacion
+    atravez de un servicio global que maneje todo el estado de la
+    aplicacion
+-->
+
+
+
+<h2> Pagina Principal del componente de los Simposon Working with Angular </h2>
+<hr/>
+<div class="row"> 
+    <div class="col">
+
+        <app-personajes></app-personajes> 
+        <!--  
+            [personajes]="personajes" pasar informacion de componente padre a componente hijo
+        -->
+    </div>
+    <div class="col">
+        <app-agregar 
+         ></app-agregar>
+         <!-- Enviando Parametros entre componentes -->
+    </div>
+</div>

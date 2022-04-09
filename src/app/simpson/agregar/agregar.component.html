@@ -1,0 +1,38 @@
+
+
+
+<!-- HTML de agregar componente 
+    
+    *   name="name"
+    *   [(ngModel)] = "nuevo.name"
+    Directivas de Angular para poder hacer uso de un modulo llamdo FormsModule
+    Sirven para recolectar la informacion de un input
+    *   (ngSubmit)="agregar()"
+    Directiva de Angular en el formulario que es el que ejecuta la accion
+    de refresh en la pagina y el envio de datos.
+
+-->
+
+
+
+
+<h3> Agregar </h3>
+<hr />
+<form (ngSubmit)="agregar()" >
+    <input 
+    placeholder="Personajes Name " 
+    type="text" 
+    name="name"
+    [(ngModel)] = "nuevo.name"
+    />
+    <input 
+    placeholder="Personajes LastName " 
+    type="text" 
+    name="lastname"
+    [(ngModel)] = "nuevo.lastname"
+    />
+    <button type="submit"> Agregar </button>
+</form>
+
+
+<!-- FIN HTML de agregar componente -->

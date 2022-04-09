@@ -162,3 +162,57 @@ siempre es bueno empaquetar los modulos para entrar en la carga perezosa ( lazy 
                 ]
             })
             export class HeroesModule{}
+
+
+##  Mandar informacion de componentes Padres a Hijos
+    - Forms Module
+        Trabajando con formularios evitando full refresh ( ya no es recomendable debido a que podemos extraer la data con JavaScript [ TypeScript ])
+    -   Angular dispone de un Modulo para trabar con formularios y Formularios reactivos
+        * FormsModule -> NgSumit
+        ->  [value]="nuevo.lastname"
+        ->  name="lastname"
+        ->  [(ngModel)] = "nuevo.lastname"
+
+    -   Modularizar componentes padres e hijos
+    ( cortar todo un contenido / una especie de pequeñas funciones )
+    pasarle informacion de componentes padres a hijos ->
+    Enviar informacion al hijo (HTML) =>  [personajes]="personajes" pasar informacion de componente padre a componente hijo
+    Recibir informacion ( hijo ) => @Input() personajes : IPersonaje[]  = []  //  Propiedad que se recibe de un componente
+
+
+
+
+##  Servicios en Angular
+Servicios en agunlar maneja muy eficiente de manera global informaciones
+hace que no se maneje como en React un Redux
+    -   Crear el Servicio de Manera Manual
+    src-> app -> ( folder with module ) -> Services -> "Name Service".services.ts
+    eg. 
+        @injectable (@angular*core)
+        export class NameServices {
+            constructor(){
+                console.log('servicio inicializado')
+            }
+        }
+
+    2. dentro del modulo
+        * providers : [
+            'name_services'.services.ts
+        ]
+    
+    3. Dentro de el componente en su constructor ->
+        - constructor( private simpsonservice : SimpsonServices){}
+
+    // Con los servicios es mas sencillo distrubuir la data dentro de los componentes
+    pasandolo a quien lo necesite
+
+
+##  Despliegues de un build de produccion en Netlify *Inicialmente*
+*   Tener este codigo limpio
+*   Codigo Ordenado
+*   Debuggear el codigo ( componentes / modulos / servicios y paqueteria )
+*   Controlar las versiones con Git y servicio de controlado de versiones en la nube ( Github )
+*   Generar build de produccion ( bundle ( static (css, javascript)))
+*comando*
+
+-> ng build ( generame la version de produccion )
